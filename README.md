@@ -1,5 +1,5 @@
 
-[![Actions Status](https://github.com/buldogic/frontend-project-11/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/buldogic/frontend-project-11/actions)
+[![example workflow](https://github.com/buldogic/frontend-project-11/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/buldogic/frontend-project-11/actions)
 
 
 # 🚀 Welcome to your new awesome project!
