@@ -6,7 +6,7 @@
 
 # Welcome this site
 
-[![link](https://frontend-project-11-k2xnwri9f-andreys-projects-168bbf46.vercel.app/)]
+[link](https://frontend-project-11-k2xnwri9f-andreys-projects-168bbf46.vercel.app/)
 
 # 🚀 Welcome to your new awesome project!
 
