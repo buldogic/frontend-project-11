@@ -2,7 +2,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/690d17339fa320f35a5f/maintainability)](https://codeclimate.com/github/buldogic/frontend-project-11/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/690d17339fa320f35a5f/test_coverage)](https://codeclimate.com/github/buldogic/frontend-project-11/test_coverage)
 
 #  Site
 
