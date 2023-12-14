@@ -86,7 +86,7 @@ const app = (textLib) => {
             watcher.feeds.push(newFeed);
             data.items.forEach((item) => {
               let post = { feedID: newFeed.id, id: v4() };
-              post = Object.assign(item, post);
+              post = {...item, ...post};
               watcher.posts.push(post);
             });
             watcher.loading = 'ok';
@@ -120,7 +120,7 @@ const app = (textLib) => {
         data.items.forEach((item) => {
           if (!oldPostsLinks.includes(item.link)) {
             let newPost = { feedID: feed.id, id: v4() };
-            newPost = Object.assign(item, newPost);
+            newPost = {...item, newPost};
             watcher.posts.push(newPost);
           }
         });
