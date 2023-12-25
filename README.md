@@ -7,18 +7,21 @@
 
 [(Welcome this site)](https://frontend-project-11-six-ashy.vercel.app/)
 
-# 🚀 Welcome to your new awesome project!
+# 🚀 RSS agreggator is online servise for the agregation RSS feeds to make easy reading
 
-This project has been created using **webpack-cli**, you can now run
+Uploading posts every 5 sec
+The quick preview of posts
 
-```
-npm run build
-```
-
-or
 
 ```
-yarn build
+Instructions for starting the project
+
 ```
 
-to bundle your application
+npm ci
+```
+
+npm run start
+```
+
+Enjoy your use

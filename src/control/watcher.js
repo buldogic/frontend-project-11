@@ -25,7 +25,7 @@ const watchedState = (initialState, elements, textLib) => onChange(initialState,
       }
       inputField.classList.remove('is-invalid');
     }
-    feedback.innerHTML = value;
+    feedback.textContent = value;
   };
 
   const watchLoading = () => {
