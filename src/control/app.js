@@ -1,10 +1,10 @@
-import i18n from "i18next";
-import * as yup from "yup";
-import ru from "./ru";
-import { v4 } from "uuid";
-import watchedState from "./watcher";
-import parse from "./parser";
-import axios from "axios";
+import i18n from 'i18next';
+import * as yup from 'yup';
+import { v4 } from 'uuid';
+import axios from 'axios';
+import ru from './ru.js';
+import watchedState from './watcher.js';
+import parse from './parser.js';
 
 const app = (textLib) => {
   yup.setLocale({
@@ -25,16 +25,18 @@ const app = (textLib) => {
       .catch((e) => e.message);
   };
 
+  const fakeDocument = typeof document === 'undefined' ? {} : document;
+
   const elements = {
-    form: document.querySelector('form'),
-    submit: document.querySelector('button[type="submit"]'),
-    feedback: document.querySelector('.feedback'),
-    inputField: document.getElementById('url-input'),
-    feedsContainer: document.querySelector('.feeds'),
-    postsContainer: document.querySelector('.posts'),
-    modalTitle: document.querySelector('.modal-title'),
-    modalBody: document.querySelector('.modal-body'),
-    openFull: document.querySelector('.full-article'),
+    form: fakeDocument.querySelector('form'),
+    submit: fakeDocument.querySelector('button[type="submit"]'),
+    feedback: fakeDocument.querySelector('.feedback'),
+    inputField: fakeDocument.getElementById('url-input'),
+    feedsContainer: fakeDocument.querySelector('.feeds'),
+    postsContainer: fakeDocument.querySelector('.posts'),
+    modalTitle: fakeDocument.querySelector('.modal-title'),
+    modalBody: fakeDocument.querySelector('.modal-body'),
+    openFull: fakeDocument.querySelector('.full-article'),
   };
 
   const state = {
@@ -86,7 +88,7 @@ const app = (textLib) => {
             watcher.feeds.push(newFeed);
             data.items.forEach((item) => {
               let post = { feedID: newFeed.id, id: v4() };
-              post = {...item, ...post};
+              post = { ...item, ...post };
               watcher.posts.push(post);
             });
             watcher.loading = 'ok';
@@ -120,7 +122,7 @@ const app = (textLib) => {
         data.items.forEach((item) => {
           if (!oldPostsLinks.includes(item.link)) {
             let newPost = { feedID: feed.id, id: v4() };
-            newPost = {...item, newPost};
+            newPost = { ...item, newPost };
             watcher.posts.push(newPost);
           }
         });

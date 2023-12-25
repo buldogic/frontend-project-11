@@ -1,20 +1,11 @@
 install: 
 	npm ci
 
- publish:
-	 npm publish --dry-run
+start: 
+npm run start
 
- lint:
+lint:
 	npx eslint .
 
-lint fix:
-	npx eslint --fix .
 
-gendiff -h:
-	node gendiff.js 
 
-test:
-	npm test 
-
-test-coverage:
-	npx jest --coverage
